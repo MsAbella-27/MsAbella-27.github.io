@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rochelle Abella — BSIT Portfolio</title>
+<title>Rochelle Abella — Portfolio</title>
 <meta name="description" content="Cute & techie portfolio of Rochelle Abella, BSIT student.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +51,7 @@ body::before {
   z-index: 0;
 }
 
-.portfolio h1,.portfolio h2,.portfolio h3,.portfolio h4 { font-family:'Fredoka',sans-serif; letter-spacing:-.5px; }
+.portfolio h1,.portfolio h2,.portfolio h3,.portfolio h4 { font-family:'Fredoka',sans-serif; letter-spacing:-.5px; font-size: 55px; }
 .portfolio .mono { font-family:'JetBrains Mono', monospace; }
 .portfolio section { position: relative; z-index: 1; padding: 96px 0; }
 
@@ -157,7 +157,7 @@ body::before {
 .card-cute {
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
   border: 1px solid rgba(201,180,255,.18);
-  border-radius: 22px;
+  border-radius: 30px;
   padding: 24px;
   color: var(--ink);
   transition: transform .2s ease, border-color .2s ease;
@@ -195,7 +195,7 @@ body::before {
 /* Toolkit */
 .tool-pill {
   display:inline-flex; align-items:center; gap:8px;
-  padding: 10px 16px;
+  padding: 8px 10px;
   background: linear-gradient(135deg, rgba(107,232,255,.12), rgba(201,180,255,.12));
   border:1px solid rgba(201,180,255,.25);
   border-radius:999px; margin:6px; font-size:.92rem;
@@ -318,15 +318,6 @@ footer.p-foot {
 .marquee span i { color: var(--mint); }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
-/* Contact form */
-.cute-form .form-control, .cute-form .form-control:focus {
-  background: rgba(11,16,32,.6); color: var(--ink);
-  border:1px solid rgba(201,180,255,.25); border-radius: 14px;
-  padding: 12px 16px; box-shadow:none;
-}
-.cute-form .form-control:focus { border-color: var(--mint); box-shadow:0 0 0 4px rgba(122,252,209,.18); }
-.cute-form .form-control::placeholder { color: rgba(168,179,209,.6); }
-.cute-form label { color: var(--cyan); font-family:'JetBrains Mono', monospace; font-size:.78rem; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:6px; }
 
 .send-btn {
   background: linear-gradient(135deg, var(--pink), var(--lilac), var(--cyan));
@@ -392,7 +383,7 @@ footer.p-foot {
 /* Portrait at center */
 .hero-art-v2 .portrait-wrap {
   position: relative; z-index: 3;
-  width: 100%; aspect-ratio: 1/1;
+  width: 95%; aspect-ratio: 1/1;
   border-radius: 50%;
   background:
     radial-gradient(circle at 50% 60%, rgba(122,252,209,.25), transparent 70%),
@@ -411,7 +402,7 @@ footer.p-foot {
   z-index: -1;
 }
 .hero-art-v2 .portrait-wrap img {
-  width: 115%; max-height: 125%; object-fit: contain;
+  width: 120%; max-height: 125%; object-fit: contain;
   object-position: center bottom;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,.5));
   margin-top: -8%;
@@ -420,7 +411,7 @@ footer.p-foot {
   width: 100%; height: 100%;
   display: grid; place-items: center;
   color: var(--muted); font-family:'JetBrains Mono', monospace; font-size: .8rem;
-  text-align: center; padding: 20px;
+  text-align: center; padding: 30px;
 }
 
 /* Orbiting stickers: each rotates around the center, then counter-rotates to stay upright */
@@ -574,11 +565,11 @@ footer.p-foot {
   <div class="hero-grid">
     <div>
       <span class="tag-chip"><i class="bi bi-cpu-fill"></i> BSIT Student &middot; Future Dev</span>
-      <h1 class="hero-title mt-3">
+      <h2 class="hero-title mt-3">
         Hi, I'm <span class="grad">Rochelle</span> <br>
-        I build cute things <br> with <span class="grad">clean code</span>
+        I build  complex and entertaining projects <br> with <span class="grad">clean code</span>
         <span class="cursor-blink"></span>
-      </h1>
+      </h2>
       <p class="hero-sub mt-4">
         An Information Technology student who loves turning ideas into playful, functional little digital worlds &mdash;
         one line of Java, one pastel pixel at a time.
@@ -593,8 +584,8 @@ footer.p-foot {
       </div>
       <div class="d-flex gap-4 mt-4 mono flex-wrap" style="color: var(--muted); font-size: .9rem;">
         <span><span style="color: var(--mint)">5+</span> repos</span>
-        <span><span style="color: var(--cyan)">3</span> yrs in IT</span>
-        <span><span style="color: var(--pink)">&infin;</span> cups of coffee</span>
+        <span><span style="color: var(--cyan)">1+</span> yrs in IT</span>
+        <span><span style="color: var(--pink)">&infin;</span> cups of coffee with a mix of chia seeds</span>
       </div>
     </div>
 
@@ -607,7 +598,6 @@ footer.p-foot {
       <i class="bi bi-stars sparkle" style="bottom: 12%; left: 6%; font-size: .95rem; animation-delay: 0.6s;"></i>
       <i class="bi bi-asterisk sparkle" style="top: 55%; right: 2%; color: var(--pink); animation-delay: 1.2s;"></i>
 
-      <!-- Portrait — replace me.png with your transparent PNG -->
       <div class="portrait-wrap">
         <img src="me.png" alt="Rochelle Abella" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
       </div>
@@ -624,10 +614,6 @@ footer.p-foot {
             <i class="bi bi-heart-fill"></i> coffee++
           </span>
         </div>
-        <div class="orbit-item spd-3" style="animation-delay: -3s;">
-          <span class="chip c-cyan" style="--r: 245px; animation-delay: -3s;">
-            <i class="bi bi-code-slash"></i> &lt;dev/&gt;
-          </span>
         </div>
         <div class="orbit-item spd-2" style="animation-delay: -5s;">
           <span class="chip c-mint" style="--r: 215px; animation-delay: -5s;">
@@ -667,7 +653,7 @@ footer.p-foot {
 <section id="about" class="container">
   <div class="text-center mb-5">
     <div class="section-eyebrow">// about_me.exe</div>
-    <h2 class="section-title">About<span class="accent">.</span> me &#127800;</h2>
+    <h2 class="section-title">A little <span class="accent">about</span> me &#127800;</h2>
   </div>
   <div class="row g-4 align-items-center">
     <div class="col-lg-5">
@@ -676,7 +662,7 @@ footer.p-foot {
         <pre><span class="k">const</span> <span class="v">me</span> = {
   <span class="s">name</span>: <span class="s">"Rochelle Abella"</span>,
   <span class="s">role</span>: <span class="s">"BSIT Student"</span>,
-  <span class="s">loves</span>: [<span class="s">"Java"</span>, <span class="s">"UI"</span>, <span class="s">"cats"</span>],
+  <span class="s">loves</span>: [<span class="s">"Java"</span>, <span class="s">"UI"</span>, <span class="s">"cats"</span><span class="s">"pinterest"</span>],
   <span class="s">stack</span>: <span class="s">"learning daily"</span>,
   <span class="s">mood</span>: <span class="s">"caffeinated &#129371;"</span>,
 };
@@ -688,7 +674,8 @@ footer.p-foot {
       <p style="color: var(--muted); line-height: 1.8;">
         I'm an Information Technology student who's genuinely curious about how things work behind the screen.
         I enjoy building small systems that solve real, tiny problems &mdash; and making sure they look pretty while
-        doing it. My happy place is somewhere between a code editor, a Figma file, and a warm cup of milk tea.
+        doing it. My happy place is somewhere between a code editor, a canva editor, and a warm cup of coffee. I also enjoy
+        editing photos and videos using editing tools.
       </p>
       <div class="row g-3 mt-3">
         <div class="col-sm-6"><div class="info-tile"><div class="lbl"><i class="bi bi-person-badge"></i> Name</div><div class="val">Rochelle Abella</div></div></div>
@@ -719,9 +706,9 @@ footer.p-foot {
 
 <!-- TOOLKIT -->
 <section id="toolkit" class="container">
-  <div class="text-center mb-5">
-    <div class="section-eyebrow">// my_toolkit.json</div>
-    <h2 class="section-title">Toolkit & <span class="accent">skills</span> &#128736;&#65039;</h2>
+  <div class="text-center m-5">
+    <div class="section-eyebrow">// my_toolkit</div>
+    <h2 class="section-title">Toolkit & <span class="accent">Skills</span> &#128736;&#65039;</h2>
     <p style="color: var(--muted)">The little tech-stack I bring to every project.</p>
   </div>
   <div class="row g-4">
@@ -729,10 +716,10 @@ footer.p-foot {
       <div class="card-cute h-100">
         <h5><i class="bi bi-braces-asterisk me-2" style="color: var(--mint)"></i>Languages</h5>
         <div class="mt-3">
-          <span class="tool-pill"><i class="bi bi-code-square"></i>Java</span>
-          <span class="tool-pill"><i class="bi bi-code-square"></i>HTML</span>
-          <span class="tool-pill"><i class="bi bi-code-square"></i>CSS</span>
-          <span class="tool-pill"><i class="bi bi-code-square"></i>SQL</span>
+          <span class="tool-pill"><i class="bi bi-braces"></i>Java</span>
+          <span class="tool-pill"><i class="bi bi-code-slash"></i>HTML</span>
+          <span class="tool-pill"><i class="bi bi-filetype-css"></i>CSS</span>
+          <span class="tool-pill"><i class="bi bi-database"></i>SQL</span>
         </div>
       </div>
     </div>
@@ -740,25 +727,39 @@ footer.p-foot {
       <div class="card-cute h-100">
         <h5><i class="bi bi-tools me-2" style="color: var(--cyan)"></i>Tools &amp; Frameworks</h5>
         <div class="mt-3">
-          <span class="tool-pill"><i class="bi bi-wrench-adjustable"></i>Bootstrap</span>
-          <span class="tool-pill"><i class="bi bi-wrench-adjustable"></i>Git &amp; GitHub</span>
-          <span class="tool-pill"><i class="bi bi-wrench-adjustable"></i>VS Code</span>
-          <span class="tool-pill"><i class="bi bi-wrench-adjustable"></i>NetBeans</span>
-          <span class="tool-pill"><i class="bi bi-wrench-adjustable"></i>Figma</span>
-          <span class="tool-pill"><i class="bi bi-wrench-adjustable"></i>MySQL</span>
+          <span class="tool-pill"><i class="bi bi-bootstrap"></i>Bootstrap</span>
+          <span class="tool-pill"><i class="bi bi-github"></i>GitHub</span>
+          <span class="tool-pill"><i class="bi bi-code-slash"></i>VS Code</span>
+          <span class="tool-pill"><i class="bi bi-braces"></i>NetBeans</span>
+          <span class="tool-pill"><i class="bi bi-diagram-2"></i>Figma</span>
+          <span class="tool-pill"><i class="bi bi-database"></i>MySQL</span>
         </div>
       </div>
     </div>
+
+        <div class="col-md-4">
+      <div class="card-cute h-100">
+        <h5><i class="bi bi-camera-fill me-2" style="color: var(--cyan)"></i>Visual Communication platform</h5>
+        <div class="mt-3">
+          <span class="tool-pill"><i class="bi bi-image-fill"></i>Canva</span>
+          <span class="tool-pill"><i class="bi bi-camera"></i>Capcut</span>
+          <span class="tool-pill"><i class="bi bi-camera-fill"></i>Lucid Chart</span>
+        </div>
+      </div>
+    </div>
+
     <div class="col-md-4">
       <div class="card-cute h-100">
         <h5><i class="bi bi-stars me-2" style="color: var(--pink)"></i>Soft Skills</h5>
         <div class="mt-3">
-          <span class="tool-pill"><i class="bi bi-heart-pulse"></i>Teamwork</span>
-          <span class="tool-pill"><i class="bi bi-heart-pulse"></i>Leadership</span>
-          <span class="tool-pill"><i class="bi bi-heart-pulse"></i>Logic</span>
-          <span class="tool-pill"><i class="bi bi-heart-pulse"></i>Creativity</span>
-          <span class="tool-pill"><i class="bi bi-heart-pulse"></i>Adaptability</span>
-          <span class="tool-pill"><i class="bi bi-heart-pulse"></i>Communication</span>
+          <span class="tool-pill"><i class="bi bi-people"></i>Teamwork</span>
+          <span class="tool-pill"><i class="bi bi-person-standing"></i>Leadership</span>
+          <span class="tool-pill"><i class="bi bi-card-list"></i>Logic</span>
+          <span class="tool-pill"><i class="bi bi-palette"></i>Creativity</span>
+          <span class="tool-pill"><i class="bi bi-person"></i>Adaptability</span>
+          <span class="tool-pill"><i class="bi bi-person-fill"></i>Communication</span>
+          <span class="tool-pill"><i class="bi bi-camera"></i>Editing</span>
+          <span class="tool-pill"><i class="bi bi-camera-reels"></i>Filming</span>
         </div>
       </div>
     </div>
@@ -767,8 +768,8 @@ footer.p-foot {
 
 <!-- PROJECTS -->
 <section id="projects" class="container">
-  <div class="text-center mb-5">
-    <div class="section-eyebrow">// /projects</div>
+  <div class="text-center m-5">
+    <div class="section-eyebrow">// Projects</div>
     <h2 class="section-title">Things I've <span class="accent">built</span> &#128150;</h2>
   </div>
   <div class="row g-4" id="projects-grid">
@@ -800,7 +801,7 @@ footer.p-foot {
         <h5>Lost &amp; Found System</h5>
         <p style="color: var(--muted); font-size: .95rem;">Campus lost-and-found tracker that helps students report missing items and reunite them with their owners.</p>
         <div>
-          <span class="tech-tag">Java</span><span class="tech-tag">OOP</span><span class="tech-tag">Database</span>
+          <span class="tech-tag">Java</span>
                  <br>
           <a href="https://github.com/MsAbella-27/Lost-and-Found-System"
             target="_blank"
@@ -816,9 +817,9 @@ footer.p-foot {
           <img src="Yogu.png" alt="Yogu Website" class="project-img">
         </div>
         <h5>Yogu Website</h5>
-        <p style="color: var(--muted); font-size: .95rem;">A playful frontend website for a yogurt shop &mdash; built with HTML, CSS and a sprinkle of love.</p>
+        <p style="color: var(--muted); font-size: .95rem;">A frontend website for a yogurt shop &mdash; built with HTML, CSS and Bootstrap.</p>
         <div>
-          <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Web</span>
+          <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Bootstrap</span>
                   <br>
           <a href="https://github.com/MsAbella-27/Yogu-Website"
             target="_blank"
@@ -833,7 +834,7 @@ footer.p-foot {
 
 <!-- CERTS -->
 <section id="certs" class="container">
-  <div class="text-center mb-5">
+  <div class="text-center m-5">
     <div class="section-eyebrow">// achievements.log</div>
     <h2 class="section-title">Certificates &amp; <span class="accent">awards</span> &#127942;</h2>
   </div>
@@ -852,14 +853,14 @@ footer.p-foot {
 
 <!-- CONTACT -->
 <section id="contact" class="container">
-  <div class="text-center mb-5">
+  <div class="text-center m-5">
     <div class="section-eyebrow">// contact.me()</div>
     <h2 class="section-title">Let's build something <span class="accent">extraordinary</span> &#10024;</h2>
     <p style="color: var(--muted)">Slide into my inbox &mdash; I reply fast (probably while sipping a coffee &#129371;).</p>
   </div>
   <div class="contact-card">
-    <div class="row g-5">
-      <div class="col-lg-5">
+    
+      <div class="col-lg-8">
         <h4 class="mb-3"><i class="bi bi-chat-heart-fill me-2" style="color: var(--pink)"></i>Find me here</h4>
         <div class="d-flex flex-column gap-3">
           <a class="contact-link" href="mailto:abella.rochelle@dnsc.edu.ph">
@@ -870,7 +871,7 @@ footer.p-foot {
             <i class="bi bi-github"></i>
             <span>github.com/MsAbella-27</span>
           </a>
-          <a class="contact-link" href="#">
+          <a class="contact-link" href="https://www.facebook.com/rochelle.abella.749663/" target="_blank" rel="noreferrer">
             <i class="bi bi-facebook"></i>
             <span>Facebook</span>
           </a>
@@ -880,30 +881,7 @@ footer.p-foot {
           <span>usually replies within a day &#10024;</span>
         </div>
       </div>
-      <div class="col-lg-7">
-        <form class="cute-form" id="contact-form">
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <label><i class="bi bi-person-fill me-1"></i>your name</label>
-              <input required name="name" class="form-control" placeholder="Hi, I'm...">
-            </div>
-            <div class="col-sm-6">
-              <label><i class="bi bi-envelope-fill me-1"></i>your email</label>
-              <input required type="email" name="email" class="form-control" placeholder="you@example.com">
-            </div>
-            <div class="col-12">
-              <label><i class="bi bi-chat-dots-fill me-1"></i>your message</label>
-              <textarea required rows="5" name="message" class="form-control" placeholder="Tell me about your idea, project, or just say hi &#128140;"></textarea>
-            </div>
-            <div class="col-12 d-flex justify-content-end">
-              <button type="submit" class="btn send-btn">
-                <i class="bi bi-send-fill"></i> Send a message
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+
   </div>
   <footer class="p-foot">
     <span>// built with </span>
@@ -913,14 +891,7 @@ footer.p-foot {
   </footer>
 </section>
 
-<!-- Confetti hearts -->
-<div class="confetti" id="confetti"></div>
 
-<!-- Toast -->
-<div id="toast" class="cute-toast" style="display:none;">
-  <i class="bi bi-check-circle-fill"></i>
-  <span>Yay! Message sent &mdash; thank you! &#128140;</span>
-</div>
 
 </div>
 
@@ -931,38 +902,6 @@ const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-// Project image swap
-document.querySelectorAll('.project-swap').forEach(input => {
-  input.addEventListener('change', (e) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const url = URL.createObjectURL(file);
-    const img = e.target.closest('.project-card').querySelector('.project-img');
-    if (img) img.src = url;
-  });
-});
-
-// Contact form
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const toast = document.getElementById('toast');
-  toast.style.display = 'flex';
-  setTimeout(() => { toast.style.display = 'none'; }, 2800);
-  e.target.reset();
-
-  // Confetti hearts
-  const confetti = document.getElementById('confetti');
-  for (let i = 0; i < 5; i++) {
-    const heart = document.createElement('span');
-    heart.className = 'heart-pop';
-    heart.textContent = '💖';
-    heart.style.right = (i * 14) + 'px';
-    heart.style.animationDelay = (i * 0.15) + 's';
-    confetti.appendChild(heart);
-    setTimeout(() => heart.remove(), 1500);
-  }
-});
 
 // Year
 const currentYear = new Date().getFullYear();
