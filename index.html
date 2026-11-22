@@ -7,7 +7,7 @@
 <meta name="description" content="Cute & techie portfolio of Rochelle Abella, BSIT student.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;600;700&family=Titan+One&family=Orbitron:wght@600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <style>
@@ -533,6 +533,135 @@ footer.p-foot {
 @media (max-width: 600px) {
   .orbit-item > .chip { --r: 150px !important; font-size: .68rem; padding: 6px 10px; }
 }
+
+/* ===== Playful teal-blueprint theme (matches reference image) ===== */
+:root{
+  --bg:#11566b; --bg-2:#0e4a5e; --ink:#ffffff; --muted:#bfe7ee;
+  --mint:#58dd9b; --mint-d:#2a9862; --cyan:#7fe3ff; --lilac:#b79cff; --pink:#f08ad8;
+  --magenta:#d65ce0; --orange:#ffa24a; --purple:#8b5cf6; --blue:#5b7bff; --yellow:#ffd24d;
+  --grid-line:rgba(255,255,255,.07);
+}
+body{
+  background:
+    radial-gradient(900px 480px at 50% -8%, rgba(88,221,155,.22), transparent 62%),
+    linear-gradient(180deg,#1b6f86 0%,#11566b 45%,#0d4558 100%);
+  font-family:'Space Mono',monospace;
+}
+body::before{ background-size:40px 40px; mask-image:none; -webkit-mask-image:none; }
+.portfolio h1,.portfolio h2,.portfolio h3,.portfolio h4,.portfolio h5,.portfolio h6{ font-family:'Titan One','Fredoka',sans-serif; font-weight:400; letter-spacing:.5px; }
+.portfolio h3{ font-size:2rem; } .portfolio h4{ font-size:1.5rem; } .portfolio h5{ font-size:1.2rem; } .portfolio h6{ font-size:1.05rem; }
+.portfolio p{ font-size:.92rem; line-height:1.75; }
+
+/* chunky 3D lettering */
+.portfolio .hero-title{ font-size:clamp(1.9rem,4.2vw,3.2rem); line-height:1.25; text-shadow:0 3px 0 rgba(0,0,0,.22); }
+.hero-title .grad{
+  display:inline-block; font-size:1.35em; line-height:1.05;
+  background:none; -webkit-text-fill-color:currentColor; color:var(--mint);
+  text-shadow:0 1px 0 #2fae70,0 2px 0 #2fae70,0 3px 0 var(--mint-d),0 4px 0 var(--mint-d),0 5px 0 #217a50,0 6px 0 #217a50,0 12px 16px rgba(0,0,0,.35);
+}
+.hero-title .grad:nth-of-type(2){
+  color:#f6a0e4;
+  text-shadow:0 1px 0 #d870c4,0 2px 0 #d870c4,0 3px 0 #b653a4,0 4px 0 #b653a4,0 5px 0 #98408a,0 6px 0 #98408a,0 12px 16px rgba(0,0,0,.35);
+}
+.portfolio .section-title{ font-size:clamp(2rem,4.4vw,3.2rem); text-shadow:0 3px 0 rgba(0,0,0,.22); }
+.section-title .accent{ color:var(--mint); text-shadow:0 1px 0 #2fae70,0 2px 0 #2fae70,0 3px 0 var(--mint-d),0 4px 0 var(--mint-d),0 5px 0 #217a50,0 10px 14px rgba(0,0,0,.3); }
+
+/* Figma-style selection box */
+.select-box{ position:relative; }
+.select-box::before,
+.hero-art-v2 .portrait-wrap.select-box::before{
+  content:""; position:absolute; inset:-6px; z-index:6; pointer-events:none;
+  border:2px solid var(--hc,var(--magenta)); border-radius:2px; filter:none; opacity:1; animation:none;
+  background:
+    linear-gradient(var(--hc,var(--magenta)),var(--hc,var(--magenta))) 0 0/10px 10px no-repeat,
+    linear-gradient(var(--hc,var(--magenta)),var(--hc,var(--magenta))) 100% 0/10px 10px no-repeat,
+    linear-gradient(var(--hc,var(--magenta)),var(--hc,var(--magenta))) 0 100%/10px 10px no-repeat,
+    linear-gradient(var(--hc,var(--magenta)),var(--hc,var(--magenta))) 100% 100%/10px 10px no-repeat;
+}
+.hero-title .select-box::after{
+  content:""; position:absolute; left:-18px; bottom:-14px; width:18px; height:18px; background:var(--orange);
+  clip-path:polygon(0 0,100% 55%,55% 62%,40% 100%); transform:rotate(-12deg);
+}
+.hero-art-v2 .portrait-wrap.select-box{ --hc:var(--blue); }
+
+/* nav */
+.nav-pill{ background:#fff; border:3px solid var(--magenta); box-shadow:0 6px 0 rgba(0,0,0,.18); }
+.nav-pill .brand{ font-family:'Titan One'; color:var(--magenta); font-weight:400; }
+.nav-pill a{ color:#2b2250; font-family:'Orbitron'; font-weight:600; font-size:.72rem; }
+.nav-pill a:hover{ background:#f3e3ff; color:var(--purple); }
+.nav-pill a.mono{ color:#fff !important; background:linear-gradient(135deg,var(--orange),var(--pink)); padding:6px 14px; }
+
+/* gradient pill labels */
+.section-eyebrow, .tag-chip{
+  display:inline-block; font-family:'Orbitron'; font-weight:800; font-size:.8rem; letter-spacing:1px; text-transform:none;
+  color:#fff; border:3px solid #fff; border-radius:999px; padding:6px 18px;
+  background:linear-gradient(135deg,var(--orange),var(--pink)); transform:rotate(-3deg); box-shadow:0 5px 0 rgba(0,0,0,.18);
+}
+.tag-chip{ background:linear-gradient(135deg,var(--blue),var(--purple)); transform:rotate(2deg); }
+
+/* buttons */
+.btn-cute,.project-btn,.send-btn{
+  font-family:'Orbitron'; font-weight:800; font-size:.8rem; color:#fff; border:3px solid #fff; border-radius:999px;
+  background:linear-gradient(135deg,var(--orange),var(--pink)); box-shadow:0 6px 0 rgba(0,0,0,.2);
+}
+.btn-cute:hover,.project-btn:hover{ color:#fff; box-shadow:0 9px 0 rgba(0,0,0,.2); transform:translateY(-3px); }
+.project-btn{ background:linear-gradient(135deg,var(--blue),var(--purple)); padding:10px 22px; }
+.btn-ghost{ font-family:'Orbitron'; font-weight:600; font-size:.8rem; color:#fff; border:3px solid #fff; border-radius:999px; }
+.btn-ghost:hover{ background:rgba(255,255,255,.15); color:#fff; }
+
+/* white cards with magenta border + dashed inner outline */
+.card-cute,.contact-card{
+  --muted:#6a5a9a; background:#fff; color:#2b2250; border:3px solid var(--magenta); border-radius:30px;
+  box-shadow:0 8px 0 rgba(0,0,0,.18);
+}
+.card-cute:not(.project-card){ outline:2px dashed var(--purple); outline-offset:-12px; }
+.card-cute:hover{ border-color:var(--orange); }
+.card-cute .corner-dot{ background:var(--orange); box-shadow:none; }
+.contact-card{ padding:40px; outline:2px dashed var(--purple); outline-offset:-14px; }
+.contact-card h4{ color:#2b2250; }
+.card-cute .mono, .card-cute [style*="--cyan"]{ color:var(--purple) !important; }
+.tool-pill{ background:#f3e8ff; border:2px solid var(--purple); color:#2b2250; font-family:'Space Mono'; font-weight:700; font-size:.8rem; }
+.tool-pill i{ color:var(--magenta); }
+.tech-tag{ color:var(--purple); border:2px solid var(--purple); font-family:'Space Mono'; font-weight:700; }
+.project-card .img-wrap{ border:2px solid var(--purple); background:#f3e8ff; }
+.cert-icon{ background:linear-gradient(135deg,var(--orange),var(--pink)); color:#fff; border:3px solid #fff; box-shadow:0 4px 0 rgba(0,0,0,.18); }
+.contact-link{ background:#f6eeff; border:2px solid var(--purple); color:#2b2250; }
+.contact-link:hover{ color:var(--magenta); border-color:var(--magenta); }
+.contact-link i{ color:var(--magenta); }
+.status-card{ background:rgba(255,255,255,.14); border:2px dashed rgba(255,255,255,.6); color:#fff; font-family:'Space Mono'; }
+.contact-card .status-card{ background:#f6eeff; border-color:var(--purple); color:#2b2250; }
+.status-dot{ background:var(--mint); box-shadow:none; }
+
+/* about */
+.code-card{ background:#0d3a4c; border:3px solid var(--magenta); border-radius:22px; box-shadow:0 8px 0 rgba(0,0,0,.18); }
+.code-card .tb{ background:#0a2e3d; }
+.info-tile{ background:rgba(255,255,255,.1); border:2px dashed rgba(255,255,255,.55); }
+.info-tile i{ color:var(--yellow); }
+
+/* hero art: tilted polaroid + stickers */
+.hero-art-v2 .glow-blob,.hero-art-v2 .ring{ display:none; }
+.hero-art-v2 .portrait-wrap{
+  border-radius:30px; border:6px solid #fff; transform:rotate(3deg);
+  background:linear-gradient(160deg,#ff8ad4,#8b5cf6 60%,#5b7bff);
+  box-shadow:0 14px 0 rgba(0,0,0,.2);
+}
+.chip{ font-family:'Orbitron'; font-weight:800; font-size:.68rem; color:#fff; border:3px solid #fff; background:linear-gradient(135deg,var(--orange),var(--pink)); box-shadow:0 5px 0 rgba(0,0,0,.2); backdrop-filter:none; -webkit-backdrop-filter:none; }
+.chip.c-pink,.chip.c-lilac,.chip.c-cyan{ color:#fff; border-color:#fff; background:linear-gradient(135deg,var(--blue),var(--purple)); }
+.chip.c-mint,.chip.c-yellow{ color:#0d3a4c; border-color:#fff; background:linear-gradient(135deg,#7bf0b4,var(--mint)); }
+.fish{ position:absolute; left:-2%; bottom:6%; z-index:5; font-size:3.6rem; transform:rotate(-14deg); filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 8px 6px rgba(0,0,0,.3)); }
+.sticky{ position:absolute; top:-3%; right:-2%; z-index:5; width:96px; padding:16px 10px 12px; transform:rotate(8deg); background:linear-gradient(135deg,#ffe27a,#ffc83d); color:#6b4a00; font-family:'Space Mono'; font-weight:700; font-size:.78rem; box-shadow:0 8px 14px rgba(0,0,0,.25); }
+.sticky::before{ content:""; position:absolute; top:-8px; left:50%; width:44px; height:16px; transform:translateX(-50%) rotate(-4deg); background:rgba(255,255,255,.55); }
+.burst{ position:absolute; bottom:2%; right:-1%; z-index:5; width:92px; aspect-ratio:1; display:grid; place-items:center; color:#fff; font-family:'Titan One'; font-size:1.05rem; background:linear-gradient(135deg,var(--purple),var(--pink)); clip-path:polygon(100.0% 50.0%,90.2% 58.0%,96.2% 69.1%,84.1% 72.8%,85.4% 85.4%,72.8% 84.1%,69.1% 96.2%,58.0% 90.2%,50.0% 100.0%,42.0% 90.2%,30.9% 96.2%,27.2% 84.1%,14.6% 85.4%,15.9% 72.8%,3.8% 69.1%,9.8% 58.0%,0.0% 50.0%,9.8% 42.0%,3.8% 30.9%,15.9% 27.2%,14.6% 14.6%,27.2% 15.9%,30.9% 3.8%,42.0% 9.8%,50.0% 0.0%,58.0% 9.8%,69.1% 3.8%,72.8% 15.9%,85.4% 14.6%,84.1% 27.2%,96.2% 30.9%,90.2% 42.0%); transform:rotate(10deg); }
+
+.marquee{ border-color:rgba(255,255,255,.35); }
+.marquee span{ color:#fff; font-family:'Titan One'; font-size:1.4rem; }
+.marquee span i{ color:var(--yellow); }
+.binary{ color:rgba(255,255,255,.12); }
+.sparkle{ color:var(--yellow); }
+footer.p-foot{ color:var(--muted); border-top:2px dashed rgba(255,255,255,.35); font-family:'Space Mono'; }
+
+@media (max-width:600px){ .fish{ font-size:2.6rem; } .sticky{ width:78px; font-size:.68rem; } .burst{ width:70px; font-size:.85rem; } }
+@media (prefers-reduced-motion:reduce){ *{ animation:none !important; transition:none !important; } }
 </style>
 </head>
 <body>
@@ -566,7 +695,7 @@ footer.p-foot {
     <div>
       <span class="tag-chip"><i class="bi bi-cpu-fill"></i> BSIT Student &middot; Future Dev</span>
       <h2 class="hero-title mt-3">
-        Hi, I'm <span class="grad">Rochelle</span> <br>
+        Hi, I'm <span class="grad select-box">Rochelle</span> <br>
         I build  complex and entertaining projects <br> with <span class="grad">clean code</span>
         <span class="cursor-blink"></span>
       </h2>
@@ -598,7 +727,10 @@ footer.p-foot {
       <i class="bi bi-stars sparkle" style="bottom: 12%; left: 6%; font-size: .95rem; animation-delay: 0.6s;"></i>
       <i class="bi bi-asterisk sparkle" style="top: 55%; right: 2%; color: var(--pink); animation-delay: 1.2s;"></i>
 
-      <div class="portrait-wrap">
+      <span class="fish" aria-hidden="true">&#128032;</span>
+      <div class="sticky" aria-hidden="true">hello,<br>world!</div>
+      <div class="burst" aria-hidden="true">BSIT</div>
+      <div class="portrait-wrap select-box">
         <img src="me.png" alt="Rochelle Abella" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
       </div>
 
@@ -613,7 +745,6 @@ footer.p-foot {
           <span class="chip c-pink" style="--r: 230px; animation-delay: -7s;">
             <i class="bi bi-heart-fill"></i> coffee++
           </span>
-        </div>
         </div>
         <div class="orbit-item spd-2" style="animation-delay: -5s;">
           <span class="chip c-mint" style="--r: 215px; animation-delay: -5s;">
